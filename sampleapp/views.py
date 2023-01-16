@@ -5,7 +5,16 @@ def Tana(requset):
     Blance = 10000000.00
     context = {'name':name, 'Age':Age, 'Balance':Blance }
 
-# Create your views here.
+def AePage(request):
+    return render(request, 'AePage.html')
+
+def AePage (request):
+    name = "Supawadee"
+    surname = "Arunno"
+    gender = "fenale"
+    status = "single"
+    context = {'name': name, 'surname': surname, 'gender': gender, 'status': status}
+    return render(request, 'AePage.html', context)
 
 def home(request):
     nameteam = 'Team Frank'
